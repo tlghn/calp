@@ -1,0 +1,33 @@
+{
+  "name": "calp",
+  "version": "1.0.0",
+  "description": "Call Proxy",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlghn/calp.git"
+  },
+  "keywords": [
+    "call",
+    "proxy",
+    "call-proxy"
+  ],
+  "author": "Tolgahan Albayrak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tlghn/calp/issues"
+  },
+  "homepage": "https://github.com/tlghn/calp#readme",
+  "engines": {
+    "node": ">=6.8.1"
+  },
+  "dependencies": {
+    "tupl": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}

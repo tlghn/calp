@@ -9,8 +9,12 @@ Call Proxy
 ## Usage
 ```
     const calp = require('calp');
-    var host = calp(func[, target])
+    var host = calp(func[, target, ns])
 ```
+
+### @ns parameter *(new in 1.1)*
+calp is uses [tupl](https://www.npmjs.com/package/tupl) for caching and key mapping. 
+Please see the [tupl#create(ns)](https://www.npmjs.com/package/tupl#create) for more details
 
 ## Examples
 
@@ -83,4 +87,5 @@ Call Proxy
 **Please see the tests for other examples**
 
 ## Change Log
-- v1.0.0 Initial release
+- 1.1.0 Added namespace bounded key support
+- 1.0.0 Initial release

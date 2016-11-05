@@ -1,15 +1,16 @@
 /**
  * Created by tolgahan on 04.11.2016.
  */
-const tuple = require('tupl');
+const tupl = require('tupl');
 const MAP = new Map();
 
-module.exports = function (callback, target) {
+module.exports = function (callback, target, ns) {
+    
     if(typeof callback !== 'function'){
         throw new SyntaxError('callback is not function');
     }
-    
-    let key = tuple(target, callback);
+
+    let key = tupl.create(ns)(target, callback);
 
     if(MAP.has(key)){
         return MAP.get(key);
@@ -22,6 +23,8 @@ module.exports = function (callback, target) {
     });
 
     MAP.set(key, proxy);
+
+    key.on('destroy', key => MAP.delete(key));
 
     return proxy;
 };

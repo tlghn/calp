@@ -1,6 +1,6 @@
 {
   "name": "calp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Call Proxy",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
     "node": ">=6.8.1"
   },
   "dependencies": {
-    "tupl": "^1.0.1"
+    "tupl": "^1.1.0"
   },
   "devDependencies": {
     "chai": "^3.5.0"

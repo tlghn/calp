@@ -4,8 +4,8 @@
 const tupl = require('tupl');
 const MAP = new Map();
 
-module.exports = function (callback, target, ns) {
-    
+function calp(callback, target, ns) {
+
     if(typeof callback !== 'function'){
         throw new SyntaxError('callback is not function');
     }
@@ -27,4 +27,11 @@ module.exports = function (callback, target, ns) {
     key.on('destroy', key => MAP.delete(key));
 
     return proxy;
+}
+
+calp.destroy = function (callback, target, ns) {
+    let key = tupl.create(ns)(target, callback);
+    key.destroy();
 };
+
+module.exports = calp;
